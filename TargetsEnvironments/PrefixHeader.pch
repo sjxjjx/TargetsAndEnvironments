@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  TargetsEnvironments
+//
+//  Created by Sjx on 2019/8/14.
+//  Copyright © 2019 zhl. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#if Environment == 1    // TargetOne开发环境
+#import "TargetOneEnvironmentDev.h"
+#elif Environment == 2  // TargetOne测试环境
+#import "TargetOneEnvironmentTest.h"
+#elif Environment == 3  // TargetOne发布环境
+#import "TargetOneEnvironmentPro.h"
+#elif Environment == 4  // TargetTwo开发环境
+#import "TargetTwoEnvironmentDev.h"
+#elif Environment == 5  // TargetTwo测试环境
+#import "TargetTwoEnvironmentTest.h"
+#else                   // TargetTwo发布环境
+#import "TargetTwoEnvironmentPro.h"
+#endif
+
+
+#endif /* PrefixHeader_pch */
